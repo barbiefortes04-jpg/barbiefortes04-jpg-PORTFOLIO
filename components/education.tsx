@@ -5,44 +5,34 @@ import { GraduationCap, Award, Calendar } from 'lucide-react'
 export function Education() {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      institution: "Stanford University",
-      period: "2023 - 2025 (Expected)",
-      gpa: "3.8/4.0",
+      degree: "Bachelor of Science in Information Technology",
+      institution: "St. Paul University Philippines",
+      period: "2022 - 2027 (Expected)",
+      gpa: "Current: 3rd Year",
       description: [
-        "Specialization in Machine Learning and Artificial Intelligence",
-        "Relevant Coursework: Advanced Algorithms, Deep Learning, Computer Vision",
-        "Teaching Assistant for Introduction to Programming course"
-      ]
-    },
-    {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of California, Berkeley",
-      period: "2019 - 2023",
-      gpa: "3.7/4.0",
-      description: [
-        "Magna Cum Laude Graduate",
-        "Relevant Coursework: Data Structures, Software Engineering, Database Systems",
-        "Senior Capstone: Built a full-stack e-commerce platform"
+        "Specialization in Web Development",
+        "Relevant Coursework: PHP Programming, Java Development, Python Programming",
+        "Web Technologies: HTML, CSS, JavaScript, Database Management",
+        "Focus on practical application of programming concepts"
       ]
     }
   ]
 
   const certifications = [
     {
-      name: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      date: "March 2024"
+      name: "Academic Programming Certificates",
+      issuer: "St. Paul University Philippines",
+      date: "2023 - Present"
     },
     {
-      name: "React Developer Certification",
-      issuer: "Meta (Facebook)",
-      date: "January 2024"
+      name: "Web Development Fundamentals",
+      issuer: "IT Program Coursework",
+      date: "2023"
     },
     {
-      name: "Google Cloud Professional Cloud Architect",
-      issuer: "Google Cloud",
-      date: "November 2023"
+      name: "Database Management Basics",
+      issuer: "Academic Curriculum",
+      date: "2023"
     }
   ]
 

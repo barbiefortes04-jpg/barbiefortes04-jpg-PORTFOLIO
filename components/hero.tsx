@@ -12,24 +12,24 @@ export function Hero() {
         <div className="flex flex-col items-center text-center space-y-8">
           <Avatar className="h-32 w-32 md:h-40 md:w-40">
             <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Professional headshot" />
-            <AvatarFallback className="text-2xl">JD</AvatarFallback>
+            <AvatarFallback className="text-2xl">JF</AvatarFallback>
           </Avatar>
           
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              John Doe
+              Jherilyn Fortes
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground">
-              Full Stack Developer & UI/UX Designer
+              Aspiring Web Developer | Information Technology Student
             </h2>
             <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
+                <span>Tuguegarao City, Cagayan Valley</span>
               </div>
               <div className="flex items-center gap-1">
                 <Mail className="h-4 w-4" />
-                <span>john.doe@email.com</span>
+                <span>jherilyn.fortes@email.com</span>
               </div>
             </div>
           </div>
@@ -37,10 +37,10 @@ export function Hero() {
           <Card className="max-w-2xl">
             <CardContent className="p-6">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Passionate full-stack developer with 5+ years of experience creating 
-                innovative web applications. Specialized in React, Node.js, and modern 
-                web technologies. Currently pursuing a Master's in Computer Science 
-                while working on cutting-edge projects that bridge technology and user experience.
+                Highly motivated and ambitious 3rd-year Information Technology student at 
+                St. Paul University Philippines, specializing in Web Development. Passionate 
+                about applying technical expertise in PHP, Java, Python, and web technologies 
+                to solve real-world problems and create innovative digital solutions.
               </p>
             </CardContent>
           </Card>

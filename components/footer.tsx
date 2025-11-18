@@ -5,14 +5,14 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground">
-              © 2024 John Doe. All rights reserved.
+              © 2024 Jherilyn Fortes. All rights reserved.
             </p>
           </div>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <a href="#home" className="hover:text-foreground transition-colors">
               Back to Top
             </a>
-            <a href="mailto:john.doe@email.com" className="hover:text-foreground transition-colors">
+            <a href="mailto:jherilyn.fortes@email.com" className="hover:text-foreground transition-colors">
               Contact
             </a>
             <a href="/privacy" className="hover:text-foreground transition-colors">

@@ -3,20 +3,20 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 export function Skills() {
   const skillCategories = [
     {
-      category: "Frontend Development",
-      skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Shadcn UI"]
+      category: "Programming Languages",
+      skills: ["PHP", "Java", "Python", "JavaScript", "HTML5", "CSS3"]
     },
     {
-      category: "Backend Development",
-      skills: ["Node.js", "Express.js", "Python", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"]
+      category: "Web Development",
+      skills: ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX Fundamentals"]
     },
     {
-      category: "Tools & Technologies",
-      skills: ["Git", "Docker", "AWS", "Vercel", "Figma", "VS Code", "Jest", "Cypress"]
+      category: "Databases & Tools",
+      skills: ["MySQL", "SQL", "VS Code", "Git", "Web Browsers Developer Tools"]
     },
     {
-      category: "Soft Skills",
-      skills: ["Problem Solving", "Team Collaboration", "Communication", "Project Management", "Critical Thinking"]
+      category: "Personal Qualities",
+      skills: ["Detail-Oriented", "Dedicated Student", "Problem Solving", "Organizational Skills", "Continuous Learning"]
     }
   ]
 

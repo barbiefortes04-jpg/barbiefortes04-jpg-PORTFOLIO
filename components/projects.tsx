@@ -5,36 +5,36 @@ import { ExternalLink, Github } from 'lucide-react'
 export function Projects() {
   const projects = [
     {
-      title: "E-Commerce Dashboard",
-      description: "A comprehensive admin dashboard for managing e-commerce operations with real-time analytics, inventory management, and user administration.",
-      technologies: ["React", "Next.js", "TypeScript", "PostgreSQL", "Stripe API"],
-      githubUrl: "https://github.com/yourusername/ecommerce-dashboard",
-      liveUrl: "https://ecommerce-dashboard-demo.vercel.app",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop"
+      title: "E-Commerce Website",
+      description: "A simulated online store showcasing products, a user cart, and a basic checkout process. Academic project focusing on practical e-commerce functionality.",
+      technologies: ["PHP", "HTML", "CSS", "MySQL"],
+      githubUrl: "https://github.com/barbiefortes04-jpg/ecommerce-project",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Material-UI"],
-      githubUrl: "https://github.com/yourusername/task-manager",
-      liveUrl: "https://task-manager-demo.vercel.app",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop"
+      title: "Pastry Website",
+      description: "A beautiful website for a fictional bakery, focusing on attractive design, menu presentation, and responsive layout. Demonstrates modern web design principles.",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      githubUrl: "https://github.com/barbiefortes04-jpg/pastry-website",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=300&fit=crop"
     },
     {
-      title: "Weather Forecast App",
-      description: "A responsive weather application with location-based forecasts, interactive maps, and weather alerts using modern web APIs.",
-      technologies: ["Vue.js", "JavaScript", "OpenWeather API", "Chart.js", "PWA"],
-      githubUrl: "https://github.com/yourusername/weather-app",
-      liveUrl: "https://weather-forecast-demo.vercel.app",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop"
+      title: "Student Dashboard",
+      description: "A dashboard interface designed for students to view grades, schedules, and school announcements. Focus on UI/UX and user experience design.",
+      technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
+      githubUrl: "https://github.com/barbiefortes04-jpg/student-dashboard",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=300&fit=crop"
     },
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio website showcasing projects and skills, built with modern web technologies and optimized for performance.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/yourusername/portfolio",
-      liveUrl: "https://your-portfolio.vercel.app",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop"
+      title: "Academic Programming Projects",
+      description: "Collection of various coding activities and projects developed during coursework, showcasing progression in PHP, Java, and Python programming skills.",
+      technologies: ["PHP", "Java", "Python", "HTML", "CSS"],
+      githubUrl: "https://github.com/barbiefortes04-jpg/academic-projects",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&h=300&fit=crop"
     }
   ]
 

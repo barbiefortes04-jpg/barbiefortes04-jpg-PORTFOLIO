@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Professional CV - Your Name',
-  description: 'Professional CV website showcasing skills, experience, and projects',
+  title: 'Jherilyn Fortes - Aspiring Web Developer | IT Student Portfolio',
+  description: 'Professional CV website of Jherilyn Fortes, 3rd-year Information Technology student at St. Paul University Philippines, specializing in Web Development',
 }
 
 export default function RootLayout({

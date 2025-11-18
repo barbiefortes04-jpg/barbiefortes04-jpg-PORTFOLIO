@@ -22,7 +22,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href="#home">
-            <span className="hidden font-bold sm:inline-block">Your Name</span>
+            <span className="hidden font-bold sm:inline-block">Jherilyn Fortes</span>
           </a>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navItems.map((item) => (
@@ -48,7 +48,7 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-            <span className="font-bold md:hidden">Your Name</span>
+            <span className="font-bold md:hidden">Jherilyn Fortes</span>
           </div>
           <ThemeToggle />
         </div>

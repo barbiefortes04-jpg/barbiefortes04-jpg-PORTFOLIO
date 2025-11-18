@@ -5,39 +5,27 @@ import { CalendarDays, MapPin } from 'lucide-react'
 export function Experience() {
   const experiences = [
     {
-      title: "Frontend Developer Intern",
-      company: "TechStart Solutions",
-      location: "Remote",
-      period: "June 2024 - Present",
+      title: "Academic Project Development",
+      company: "St. Paul University Philippines",
+      location: "Tuguegarao City, Cagayan Valley",
+      period: "2023 - Present",
       description: [
-        "Developed responsive web applications using React and TypeScript",
-        "Collaborated with design team to implement UI/UX improvements",
-        "Optimized application performance resulting in 25% faster load times",
-        "Participated in code reviews and agile development processes"
+        "Developed various coding activities and projects using PHP, Java, Python, and CSS",
+        "Built foundational programming logic and implementation skills through coursework",
+        "Actively pursued web development assignments focusing on functional applications",
+        "Created aesthetically pleasing web applications with emphasis on user experience"
       ]
     },
     {
-      title: "Research Assistant",
-      company: "University Computer Science Department",
-      location: "University Campus",
-      period: "September 2023 - May 2024",
+      title: "Web Development Coursework",
+      company: "Information Technology Program",
+      location: "St. Paul University Philippines",
+      period: "2022 - Present",
       description: [
-        "Assisted in machine learning research project on natural language processing",
-        "Developed data visualization tools using Python and D3.js",
-        "Co-authored research paper published in university journal",
-        "Mentored undergraduate students in programming fundamentals"
-      ]
-    },
-    {
-      title: "Freelance Web Developer",
-      company: "Self-Employed",
-      location: "Remote",
-      period: "January 2023 - Present",
-      description: [
-        "Built custom websites for local businesses using modern web technologies",
-        "Managed client relationships and project timelines",
-        "Implemented SEO best practices and accessibility standards",
-        "Delivered projects on time and within budget for 15+ clients"
+        "Completed core programming courses in PHP, Java, and Python",
+        "Gained practical experience in HTML, CSS, and JavaScript fundamentals",
+        "Participated in collaborative coding projects and peer programming sessions",
+        "Demonstrated consistent academic performance in technical subjects"
       ]
     }
   ]

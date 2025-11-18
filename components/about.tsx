@@ -13,30 +13,31 @@ export function About() {
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Professional Background</h3>
+                <h3 className="text-xl font-semibold mb-4">Academic Background</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm a passionate full-stack developer with a strong foundation in modern web technologies. 
-                  Currently pursuing my Master's degree in Computer Science while gaining hands-on experience 
-                  through various projects and internships. My journey in tech started with a curiosity about 
-                  how things work behind the scenes of web applications.
+                  I am a dedicated 3rd-year Information Technology student at St. Paul University Philippines, 
+                  specializing in Web Development. My academic journey has equipped me with a strong foundation 
+                  in core programming concepts and practical skills in languages like PHP, Java, and Python, 
+                  alongside essential web technologies like HTML and CSS.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4">What I Do</h3>
+                <h3 className="text-xl font-semibold mb-4">Career Aspirations</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I specialize in creating user-centric web applications using React, Node.js, and modern 
-                  development practices. I enjoy solving complex problems and building scalable solutions 
-                  that make a real impact. When I'm not coding, you can find me contributing to open-source 
-                  projects or exploring new technologies.
+                  My primary goal is to successfully graduate with my IT degree and launch a dynamic career 
+                  in the tech industry as a skilled Web Developer. I am passionate about applying my technical 
+                  expertise to solve real-world problems and contribute innovative digital solutions through 
+                  web development projects and academic coursework.
                 </p>
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Values & Approach</h3>
+              <h3 className="text-xl font-semibold mb-4">Entrepreneurial Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I believe in writing clean, maintainable code and following best practices. Collaboration 
-                and continuous learning are at the core of my development philosophy. I'm always eager to 
-                take on new challenges and grow as both a developer and a team member.
+                Beyond my immediate career focus, I harbor a unique entrepreneurial vision. I aim to become 
+                a successful entrepreneur who leverages my IT skills—particularly in building online presence, 
+                e-commerce platforms, and user-friendly systems—to start and manage my own business. I plan 
+                to integrate my web development expertise with my passion for precision and organization.
               </p>
             </div>
           </CardContent>

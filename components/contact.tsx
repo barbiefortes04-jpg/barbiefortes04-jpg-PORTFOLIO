@@ -7,20 +7,20 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "john.doe@email.com",
-      href: "mailto:john.doe@email.com"
+      value: "jherilyn.fortes@email.com",
+      href: "mailto:jherilyn.fortes@email.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "[Your Phone Number]",
+      href: "tel:[YourPhoneNumber]"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
-      href: "https://maps.google.com/?q=San+Francisco,+CA"
+      value: "Tuguegarao City, Cagayan Valley",
+      href: "https://maps.google.com/?q=Tuguegarao+City,+Cagayan+Valley"
     }
   ]
 
@@ -35,11 +35,7 @@ export function Contact() {
       label: "GitHub",
       href: "https://github.com/johndoe"
     },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/johndoe"
-    }
+
   ]
 
   return (
