@@ -1,47 +1,51 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-
 export function About() {
   return (
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-4">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-center mb-8">
-              About Me
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Academic Background</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  I am a dedicated 3rd-year Information Technology student at St. Paul University Philippines, 
-                  specializing in Web Development. My academic journey has equipped me with a strong foundation 
-                  in core programming concepts and practical skills in languages like PHP, Java, and Python, 
-                  alongside essential web technologies like HTML and CSS.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Career Aspirations</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  My primary goal is to successfully graduate with my IT degree and launch a dynamic career 
-                  in the tech industry as a skilled Web Developer. I am passionate about applying my technical 
-                  expertise to solve real-world problems and contribute innovative digital solutions through 
-                  web development projects and academic coursework.
-                </p>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Entrepreneurial Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Beyond my immediate career focus, I harbor a unique entrepreneurial vision. I aim to become 
-                a successful entrepreneur who leverages my IT skills—particularly in building online presence, 
-                e-commerce platforms, and user-friendly systems—to start and manage my own business. I plan 
-                to integrate my web development expertise with my passion for precision and organization.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl mb-3 text-gray-900 dark:text-white">About Me</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Passionate IT student building expertise in web development and digital innovation
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors">
+            <h3 className="text-xl text-gray-900 dark:text-white mb-4 border-b border-blue-500 dark:border-blue-400 pb-2 inline-block">
+              Academic Background
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Dedicated 3rd-year <span className="text-blue-600 dark:text-blue-400 font-semibold">Information Technology student</span> at 
+              <a href="https://spup.edu.ph" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-semibold">
+                {' '}St. Paul University Philippines
+              </a>, specializing in Web Development. Strong foundation in programming fundamentals 
+              with hands-on experience in PHP, Java, Python, and modern web technologies.
+            </p>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors">
+            <h3 className="text-xl text-gray-900 dark:text-white mb-4 border-b border-blue-500 dark:border-blue-400 pb-2 inline-block">
+              Career Goals
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Focused on launching a successful career as a <span className="text-blue-600 dark:text-blue-400 font-semibold">Web Developer</span>, 
+              applying technical expertise to create innovative digital solutions. Passionate about solving 
+              real-world problems through clean, efficient code and user-centered design.
+            </p>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors md:col-span-2">
+            <h3 className="text-xl text-gray-900 dark:text-white mb-4 border-b border-blue-500 dark:border-blue-400 pb-2 inline-block">
+              Entrepreneurial Vision
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Beyond immediate career goals, I aspire to become a <span className="text-blue-600 dark:text-blue-400 font-semibold">tech entrepreneur</span>, 
+              leveraging web development skills to build innovative online platforms, e-commerce solutions, 
+              and user-friendly systems. Combining technical expertise with business acumen to create 
+              meaningful digital experiences.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )
