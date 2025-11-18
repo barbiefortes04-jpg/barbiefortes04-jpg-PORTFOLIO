@@ -1,6 +1,6 @@
-# Professional CV Website
+# Jherilyn Fortes - Professional CV Website
 
-A modern, responsive CV website built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI components.
+A modern, responsive CV website for Jherilyn Fortes, a 3rd-year Information Technology student at St. Paul University Philippines, specializing in Web Development. Built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI components.
 
 ## Features
 
