@@ -4,7 +4,7 @@ export function Footer() {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/jherilyn-fortes",
+      href: "https://github.com/barbiefortes04-jpg",
       label: "GitHub"
     },
     {
@@ -20,7 +20,7 @@ export function Footer() {
   ]
 
   const quickLinks = [
-    { href: "#about", label: "About" },
+    { href: "#home", label: "Home" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#education", label: "Education" },
@@ -28,14 +28,14 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div>
-            <h3 className="text-lg text-gray-900 dark:text-white mb-4">Jherilyn Fortes</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+            <h3 className="text-lg text-black dark:text-white mb-4 font-inter transition-colors duration-300">Jherilyn Fortes</h3>
+            <p className="text-black dark:text-gray-400 mb-4 leading-relaxed text-sm font-inter transition-colors duration-300">
               IT Student passionate about web development and creating innovative digital solutions. 
               Building the future one line of code at a time.
             </p>
@@ -46,10 +46,10 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group"
+                  className="p-2 bg-gray-200 dark:bg-gray-900 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-800 transition-all duration-300 group hover:scale-105"
                   aria-label={link.label}
                 >
-                  <link.icon className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                  <link.icon className="w-5 h-5 text-gray-700 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white transition-colors" />
                 </a>
               ))}
             </div>
@@ -57,13 +57,13 @@ export function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg text-gray-900 dark:text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg text-black dark:text-white mb-4 font-inter transition-colors duration-300">Quick Links</h4>
             <nav className="grid grid-cols-2 gap-2">
               {quickLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
+                  className="text-black dark:text-gray-400 hover:text-black dark:hover:text-white transition-all duration-300 text-sm font-inter hover:scale-105"
                 >
                   {link.label}
                 </a>
@@ -73,44 +73,35 @@ export function Footer() {
           
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-black dark:text-white mb-4">Get In Touch</h4>
+            <h4 className="text-lg font-semibold text-black dark:text-white mb-4 font-inter transition-colors duration-300">Get In Touch</h4>
             <div className="space-y-2 text-sm">
-              <p className="text-gray-600 dark:text-gray-400">
-                <span className="text-black dark:text-white font-medium">Email:</span><br />
+              <p className="text-black dark:text-gray-400 font-inter transition-colors duration-300">
+                <span className="text-black dark:text-white font-medium transition-colors duration-300">Email:</span><br />
                 <a 
                   href="mailto:jherilynfortes@spup.edu.ph"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-black dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-all duration-300 hover:scale-105 underline"
                 >
                   jherilynfortes@spup.edu.ph
                 </a>
               </p>
-              <p className="text-gray-600 dark:text-gray-400">
-                <span className="text-black dark:text-white font-medium">Location:</span><br />
+              <p className="text-black dark:text-gray-400 font-inter transition-colors duration-300">
+                <span className="text-black dark:text-white font-medium transition-colors duration-300">Location:</span><br />
                 Tuguegarao City, Cagayan Valley, Philippines
               </p>
-              <p className="text-gray-600 dark:text-gray-400">
-                <span className="text-black dark:text-white font-medium">Status:</span><br />
-                <span className="text-green-400">Open to opportunities</span>
+              <p className="text-black dark:text-gray-400 font-inter transition-colors duration-300">
+                <span className="text-black dark:text-white font-medium transition-colors duration-300">Status:</span><br />
+                <span className="text-black dark:text-white transition-colors duration-300">Open to opportunities</span>
               </p>
             </div>
           </div>
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 text-sm">
-              <span>© {new Date().getFullYear()} Jherilyn Fortes. Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>and</span>
-              <Code className="w-4 h-4 text-blue-400" />
-              <span>using Next.js & Tailwind CSS</span>
-            </div>
-            
-            <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-500 mt-4 md:mt-0">
-              <span>Built for Week 2 Project</span>
-              <span>•</span>
-              <span>St. Paul University Philippines</span>
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 transition-colors duration-300">
+          <div className="flex justify-center items-center">
+            <div className="text-black dark:text-gray-400 text-sm font-inter text-center transition-colors duration-300">
+              <p>Built with Next.js 15, React, and Tailwind CSS • Deployed on Vercel</p>
+              <p className="mt-2">© 2025 jherilyn fortes All rights reserved.</p>
             </div>
           </div>
         </div>

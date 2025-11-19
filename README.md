@@ -1,6 +1,10 @@
-# Jherilyn Fortes - Professional CV Website
+# Jherilyn Fortes - Professional Portfolio
 
-A modern, responsive CV website for Jherilyn Fortes, a 3rd-year Information Technology student at St. Paul University Philippines, specializing in Web Development. Built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI components.
+## 🚀 Live Demo
+Visit the live portfolio: [https://barbiefortes04-jpg-portfolio.vercel.app](https://barbiefortes04-jpg-portfolio.vercel.app)
+
+## 📋 Overview
+A comprehensive professional portfolio showcasing modern web development skills, built with Next.js 15, TypeScript, and Tailwind CSS. This portfolio integrates advanced technologies including Model Context Protocol (MCP), AI-powered chat functionality, and responsive design patterns.
 
 ## Features
 
