@@ -11,7 +11,7 @@ export default function RequirementsPage() {
   const [activeSection, setActiveSection] = useState('week-timeline')
 
   const navigationItems = [
-    { id: 'week-timeline', title: '8-Week Timeline', icon: Clock },
+    { id: 'week-timeline', title: 'Weekly Timeline', icon: Clock },
     { id: 'person-app', title: 'Person App', icon: Users },
     { id: 'mcp-servers', title: 'MCP Integration', icon: Settings },
     { id: 'digital-twin', title: 'Digital Twin Enhancement', icon: Database },
@@ -140,7 +140,7 @@ export default function RequirementsPage() {
       ],
       technologies: ["RAG Architecture", "Digital Twin", "AI Integration", "Vector Database"],
       github: "https://github.com/barbiefortes04-jpg/digital-twin-rag",
-      liveUrl: "https://digital-twin-ragui.vercel.app/",
+      liveUrl: "https://digital-twin-rag-hpfp.vercel.app",
       deliverables: [
         "RAG system foundation",
         "Digital twin architecture",
@@ -161,7 +161,7 @@ export default function RequirementsPage() {
       ],
       technologies: ["Groq AI", "llama-3.1-8b-instant", "Upstash Vector", "Semantic Search", "Streaming"],
       github: "https://github.com/barbiefortes04-jpg/digital-twin-rag",
-      liveUrl: "https://digital-twin-rag-gamma.vercel.app",
+      liveUrl: "https://digital-twin-rag-hpfp.vercel.app",
       deliverables: [
         "Advanced RAG system",
         "Production-ready deployment",
@@ -182,11 +182,57 @@ export default function RequirementsPage() {
       ],
       technologies: ["Vercel Edge", "Monitoring", "Analytics", "Performance Testing", "Enterprise Architecture"],
       github: "https://github.com/barbiefortes04-jpg/digital-twin-rag",
-      liveUrl: "https://digital-twin-rag-gamma.vercel.app",
+      liveUrl: "https://digital-twin-rag-hpfp.vercel.app",
       deliverables: [
         "Enterprise deployment",
         "Monitoring and analytics",
         "Operational procedures"
+      ]
+    },
+    {
+      week: 9,
+      title: "Integrated Professional Portfolio",
+      period: "Week 9",
+      status: "completed",
+      description: "Comprehensive professional portfolio integrating all completed projects with advanced MCP functionality and compelling presentation.",
+      achievements: [
+        "Complete showcase of all 8 weeks of projects",
+        "MCP tool calling functionality integration",
+        "Interactive demos of Person App, Digital Twin, and MCP servers",
+        "Professional branding across all components"
+      ],
+      technologies: ["Next.js", "MCP Integration", "Professional Design", "Interactive Demos", "Portfolio Architecture"],
+      github: "https://github.com/barbiefortes04-jpg/barbiefortes04-jpg-PORTFOLIO.git",
+      liveUrl: "https://barbiefortes04-jpg-portfolio.vercel.app",
+      deliverables: [
+        "Professional portfolio with all project showcases",
+        "MCP tool calling functionality",
+        "Interactive demonstrations",
+        "Professional branding guidelines"
+      ]
+    },
+    {
+      week: 10,
+      title: "Final Presentation Portfolio",
+      period: "Week 10",
+      status: "in-progress",
+      description: "Comprehensive final presentation portfolio that consolidates entire AI Agent Developer journey with industry-ready presentation materials and career launch preparation.",
+      achievements: [
+        "Complete 10-week project showcase with technical presentations",
+        "20-minute industry presentation materials with live demonstrations",
+        "Career development plan with 6-month and 1-year roadmaps",
+        "Professional network documentation and industry connections"
+      ],
+      technologies: ["Industry Presentations", "Career Planning", "Professional Networks", "Open Source", "Continuous Learning"],
+      github: "TBD - New repository for Week 10",
+      liveUrl: "TBD - New Vercel deployment for Week 10",
+      deliverables: [
+        "/presentation page - Complete industry presentation (video + slides)",
+        "/journey page - Complete 10-week learning progression documentation", 
+        "/career-plan page - Detailed professional development roadmap",
+        "/network page - Industry connections and mentorship relationships",
+        "/open-source page - Contribution plan and initial contributions",
+        "/continued-learning page - Signed learning commitment and goals"
       ]
     }
   ]
@@ -234,7 +280,7 @@ export default function RequirementsPage() {
         
         <div className="relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">
-            8-Week Learning Journey
+            10-Week Learning Journey
           </h1>
           <p className="text-lg text-black dark:text-gray-400 mb-8 max-w-3xl mx-auto">
             Comprehensive timeline showcasing progressive skill development from AI agent foundations to enterprise-grade digital twin deployment.
@@ -458,7 +504,7 @@ export default function RequirementsPage() {
             <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-6" />
             <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Component Not Implemented</h3>
             <p className="text-black dark:text-gray-400 text-lg mb-6">
-              This critical component requires implementation to showcase your 8-week learning journey.
+              This critical component requires implementation to showcase your 10-week learning journey.
             </p>
             <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6">
               <h4 className="font-bold text-black dark:text-white mb-4">Required Features:</h4>
@@ -1655,6 +1701,14 @@ export default function RequirementsPage() {
                 status: "✅ Completed",
                 color: "green",
                 achievement: "Complete portfolio ready for submission"
+              },
+              {
+                week: "Week 10",
+                title: "Final Presentation Portfolio",
+                tasks: ["/presentation page", "/journey page", "/career-plan page", "/network page", "/open-source page", "/continued-learning page"],
+                status: "🚧 In Progress",
+                color: "blue",
+                achievement: "Industry-ready presentation portfolio with career launch preparation"
               }
             ].map((phase, index) => (
               <div key={index} className="flex items-start space-x-6 p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300">
@@ -1697,7 +1751,7 @@ export default function RequirementsPage() {
             {[
               {
                 title: "Portfolio Showcase",
-                description: "Complete 8-week timeline with MCP integration and project documentation",
+                description: "Complete weekly timeline with MCP integration and project documentation",
                 url: "https://cv-website-ashen.vercel.app/requirements",
                 icon: <Target className="h-6 w-6" />,
                 status: "Main Portfolio"
@@ -2015,7 +2069,7 @@ export default function RequirementsPage() {
                     <div className="text-sm bg-gray-50 dark:bg-gray-800 p-4 rounded">
                       <div className="font-semibold text-black dark:text-white mb-2">Learning Progression Documentation:</div>
                       <div className="text-xs text-black dark:text-gray-300 space-y-1">
-                        <div>• Complete 8-week timeline with project milestones</div>
+                        <div>• Complete weekly timeline with project milestones</div>
                         <div>• Evolution from basic setup to enterprise systems</div>
                         <div>• Technical architecture progression</div>
                         <div>• Professional skill development showcase</div>

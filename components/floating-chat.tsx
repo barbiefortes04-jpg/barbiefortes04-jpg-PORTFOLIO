@@ -12,7 +12,7 @@ export function FloatingChat() {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi! I'm Jherilyn's AI Assistant, connected to her Digital Twin RAG system. Ask me about her projects, tech stack, education, experience, or achievements! Try the quick buttons below or ask any question.",
+      text: "Hi! I'm Jherilyn's AI Assistant, powered by **Groq AI** and **Upstash Vector RAG**. I can answer questions about her projects, tech stack, education, experience, and achievements! Try the quick buttons below or ask any question.",
       isBot: true,
       timestamp: new Date()
     }
@@ -103,7 +103,7 @@ export function FloatingChat() {
             </div>
             <div>
               <CardTitle className="text-sm font-semibold">AI Assistant</CardTitle>
-              <div className="text-xs opacity-90">Connected to Digital Twin RAG</div>
+              <div className="text-xs opacity-90">Powered by Groq AI • Upstash Vector</div>
             </div>
           </div>
           
@@ -229,10 +229,10 @@ export function FloatingChat() {
                 </button>
               </div>
 
-              {/* Real AI Integration Status */}
+              {/* Enhanced AI Integration Status */}
               <div className="mt-3 p-2 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg border border-green-200 dark:border-green-700">
                 <div className="text-xs text-gray-600 dark:text-gray-400 text-center mb-1">
-                  🤖 Connected to Digital Twin RAG System
+                  🚀 Enhanced AI System Active
                 </div>
                 <div className="text-xs text-green-600 dark:text-green-400 text-center">
                   Powered by <span className="font-semibold">Groq AI • Upstash Vector RAG</span> • {' '}

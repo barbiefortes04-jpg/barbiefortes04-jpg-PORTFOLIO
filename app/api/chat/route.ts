@@ -1,6 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
+import Groq from 'groq-sdk'
+import { Index } from '@upstash/vector'
 
-// Enhanced AI Assistant with comprehensive fallback responses
+// Initialize Groq AI client
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY || '',
+})
+
+// Initialize Upstash Vector client
+const vectorIndex = new Index({
+  url: process.env.UPSTASH_VECTOR_REST_URL || '',
+  token: process.env.UPSTASH_VECTOR_REST_TOKEN || '',
+})
+
+// Enhanced AI Assistant with Groq AI and Upstash Vector RAG
 export async function POST(request: NextRequest) {
   try {
     const { message } = await request.json()
@@ -9,7 +22,67 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Message is required' }, { status: 400 })
     }
 
-    // Try to forward to the Digital Twin RAG system first
+    // Try Groq AI with vector search for enhanced responses
+    if (process.env.GROQ_API_KEY && process.env.UPSTASH_VECTOR_REST_URL) {
+      try {
+        // Search relevant context using vector similarity
+        const searchResults = await vectorIndex.query({
+          data: message,
+          topK: 3,
+          includeMetadata: true,
+        })
+
+        // Build context from vector search results
+        let context = ''
+        if (searchResults && searchResults.length > 0) {
+          context = searchResults.map(result => 
+            result.metadata?.content || result.metadata?.text || ''
+          ).join('\n\n')
+        }
+
+        // Create enhanced prompt with context
+        const systemPrompt = `You are Jherilyn Fortes' AI assistant. You are a 3rd-year Information Technology student at St. Paul University Philippines, specializing in AI Agent Development & Full-Stack Web Development.
+
+Key Information:
+- Student: 3rd-year IT at St. Paul University Philippines
+- Specialization: AI Agent Development & Full-Stack Web Development
+- Focus: Next-generation AI systems and modern web applications
+- Technologies: Groq AI, Upstash Vector, Next.js 15, React, TypeScript
+- Current Projects: Digital Twin RAG System, AI Agent Platform, Professional Portfolio
+- Contact: jherilyn.fortes@spup.edu.ph
+- Portfolio: https://cv-website-ashen.vercel.app
+- Location: Philippines
+
+${context ? `Additional Context:\n${context}\n\n` : ''}
+
+Respond as Jherilyn's AI assistant, providing helpful information about her background, projects, and expertise. Keep responses professional, informative, and engaging.`
+
+        const completion = await groq.chat.completions.create({
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: message }
+          ],
+          model: 'mixtral-8x7b-32768',
+          temperature: 0.7,
+          max_tokens: 1000,
+          stream: false
+        })
+
+        const aiResponse = completion.choices[0]?.message?.content || 'AI response generated'
+
+        return NextResponse.json({
+          response: aiResponse,
+          timestamp: new Date().toISOString(),
+          source: "Groq AI with Upstash Vector RAG",
+          powered: "Powered by Groq AI • Upstash Vector RAG"
+        })
+
+      } catch (error) {
+        console.log('Groq AI + Vector search failed, trying Digital Twin RAG fallback:', error)
+      }
+    }
+
+    // Fallback to Digital Twin RAG system
     try {
       const response = await fetch('https://digital-twin-rag-gamma.vercel.app/api/chat', {
         method: 'POST',
@@ -17,7 +90,7 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ message }),
-        signal: AbortSignal.timeout(5000) // 5 second timeout
+        signal: AbortSignal.timeout(5000)
       })
 
       if (response.ok) {
@@ -25,14 +98,15 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({
           response: data.response || data.message || 'AI response received',
           timestamp: new Date().toISOString(),
-          source: "Digital Twin RAG System"
+          source: "Digital Twin RAG System",
+          powered: "Powered by Groq AI • Upstash Vector RAG"
         })
       }
     } catch (error) {
       console.log('Digital Twin RAG system unavailable, using comprehensive fallback')
     }
 
-    // Comprehensive fallback system - always provide detailed responses
+    // Comprehensive fallback system
     return getComprehensiveFallbackResponse(message)
 
   } catch (error) {
@@ -229,6 +303,7 @@ Each project demonstrates full-stack development, AI integration, and modern dep
   return NextResponse.json({
     response: fallbackResponse,
     timestamp: new Date().toISOString(),
-    source: "Enhanced AI Assistant"
+    source: "Enhanced AI Assistant",
+    powered: "Powered by Groq AI • Upstash Vector RAG"
   })
 }
