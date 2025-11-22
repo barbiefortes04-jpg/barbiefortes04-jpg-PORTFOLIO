@@ -3,15 +3,17 @@ import Groq from 'groq-sdk'
 import { Index } from '@upstash/vector'
 
 // Initialize Groq AI client
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY || '',
-})
+const groq = process.env.GROQ_API_KEY ? new Groq({
+  apiKey: process.env.GROQ_API_KEY,
+}) : null
 
-// Initialize Upstash Vector client
-const vectorIndex = new Index({
-  url: process.env.UPSTASH_VECTOR_REST_URL || '',
-  token: process.env.UPSTASH_VECTOR_REST_TOKEN || '',
-})
+// Initialize Upstash Vector client (only if environment variables are present)
+const vectorIndex = (process.env.UPSTASH_VECTOR_REST_URL && process.env.UPSTASH_VECTOR_REST_TOKEN) 
+  ? new Index({
+      url: process.env.UPSTASH_VECTOR_REST_URL,
+      token: process.env.UPSTASH_VECTOR_REST_TOKEN,
+    })
+  : null
 
 // Enhanced AI Assistant with Groq AI and Upstash Vector RAG
 export async function POST(request: NextRequest) {
@@ -23,7 +25,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Try Groq AI with vector search for enhanced responses
-    if (process.env.GROQ_API_KEY && process.env.UPSTASH_VECTOR_REST_URL) {
+    if (groq && vectorIndex) {
       try {
         // Search relevant context using vector similarity
         const searchResults = await vectorIndex.query({
@@ -78,7 +80,49 @@ Respond as Jherilyn's AI assistant, providing helpful information about her back
         })
 
       } catch (error) {
-        console.log('Groq AI + Vector search failed, trying Digital Twin RAG fallback:', error)
+        console.log('Groq AI + Vector search failed, trying fallbacks:', error)
+      }
+    }
+
+    // Try Groq AI only (without vector search)
+    if (groq) {
+      try {
+        const systemPrompt = `You are Jherilyn Fortes' AI assistant. You are a 3rd-year Information Technology student at St. Paul University Philippines, specializing in AI Agent Development & Full-Stack Web Development.
+
+Key Information:
+- Student: 3rd-year IT at St. Paul University Philippines  
+- Specialization: AI Agent Development & Full-Stack Web Development
+- Focus: Next-generation AI systems and modern web applications
+- Technologies: Groq AI, Upstash Vector, Next.js 15, React, TypeScript
+- Current Projects: Digital Twin RAG System, AI Agent Platform, Professional Portfolio
+- Contact: jherilyn.fortes@spup.edu.ph
+- Portfolio: https://cv-website-ashen.vercel.app
+- Location: Philippines
+
+Respond as Jherilyn's AI assistant, providing helpful information about her background, projects, and expertise. Keep responses professional, informative, and engaging.`
+
+        const completion = await groq.chat.completions.create({
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: message }
+          ],
+          model: 'mixtral-8x7b-32768',
+          temperature: 0.7,
+          max_tokens: 1000,
+          stream: false
+        })
+
+        const aiResponse = completion.choices[0]?.message?.content || 'AI response generated'
+
+        return NextResponse.json({
+          response: aiResponse,
+          timestamp: new Date().toISOString(),
+          source: "Groq AI",
+          powered: "Powered by Groq AI • Upstash Vector RAG"
+        })
+
+      } catch (error) {
+        console.log('Groq AI failed, trying Digital Twin RAG fallback:', error)
       }
     }
 
